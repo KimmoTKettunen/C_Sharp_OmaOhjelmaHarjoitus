@@ -55,7 +55,7 @@ namespace UnitConvertorHarjoitus
                 }
                 else if (type == "3")
                 {
-                    Console.WriteLine("Type 1 to convert deciliters to cups or 2 to convert cups to deciliters");
+                    Console.WriteLine("Type 1 to convert deciliters to cups(US) or 2 to convert cups(US) to deciliters");
                     string choice = Console.ReadLine();
 
                     if (choice == "1")
@@ -73,7 +73,7 @@ namespace UnitConvertorHarjoitus
                 }
                 else 
                 { 
-                    Console.WriteLine("Invalid command. Please Type 1 to convert lengths, 2 to convert weight and 3 to convert volume");
+                    Console.WriteLine("Invalid command. Please Type 1 to convert lengths, 2 to convert weight and 3 to convert volume\n");
                 }
             }
         }
