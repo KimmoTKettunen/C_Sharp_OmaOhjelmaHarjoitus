@@ -11,22 +11,21 @@ namespace UnitConvertorHarjoitus
             while (true)
             { 
                 Console.WriteLine("Hello and welcome to unit convertor");
-                Console.WriteLine("Type 1 to convert lengths\ntype 2 to convert weight\ntype 3 to convert volume\n");
-                //Console.ReadLine();
+                Console.WriteLine("Type 1 to convert lengths\ntype 2 to convert weight\ntype 3 to convert volume\ntype q or quit to exit\n"); //q on kivempi kirjoittaa kuin quit
                 string type = Console.ReadLine();
 
 
-                //if(Console.ReadLine() == "1")
-                if(type == "1")
+                //if(Console.ReadLine() == "1") aikasempi testaus, ei toiminut tahtomalla tavalla.
+                if (type == "1")
                 {
                     Console.Write("Type 1 to convert kilometers to miles or 2 to convert miles to kilometers: ");
                     string choice = Console.ReadLine();
 
-                    if (choice == "1") 
+                    if (choice == "1")
                     {
                         KilometersToMiles();
                     }
-                    else if (choice == "2")
+                    if (choice == "2")
                     {
                         MilesToKilometers();
                     }
@@ -44,7 +43,7 @@ namespace UnitConvertorHarjoitus
                     {
                         KilogramsToPounds();
                     }
-                    else if(choice == "2")
+                    if (choice == "2")
                     {
                         PoundsToKilograms();
                     }
@@ -60,9 +59,9 @@ namespace UnitConvertorHarjoitus
 
                     if (choice == "1")
                     {
-                        DecilitersToCups();   
+                        DecilitersToCups();
                     }
-                    else if (choice == "2")
+                    if (choice == "2")
                     {
                         CupsToDeciliters();
                     }
@@ -71,9 +70,20 @@ namespace UnitConvertorHarjoitus
                         Console.WriteLine("Invalid command - please only enter the requested number\nReturning to main menu\n");
                     }
                 }
-                else 
-                { 
-                    Console.WriteLine("Invalid command. Please Type 1 to convert lengths, 2 to convert weight and 3 to convert volume\n");
+                else if (type == "quit" || type == "q")
+                {
+                    Console.WriteLine("Confirm that you want to quit Y/N");
+                    string confirm = Console.ReadLine();
+                    string exit = confirm.ToUpper();
+                    if (exit == "Y" || exit == "Q" || exit == "QUIT") //mahdollistaa käyttäjän poistumisen jos toistaa quit tai q kuten main menussa sanotaan.
+                    {
+                        break;
+                    }
+
+                }
+                else
+                {
+                    Console.WriteLine("Invalid command. Returning to main menu\n");
                 }
             }
         }
