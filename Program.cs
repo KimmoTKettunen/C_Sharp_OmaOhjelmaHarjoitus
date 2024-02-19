@@ -84,7 +84,7 @@ namespace UnitConvertorHarjoitus
                 Console.Write("Please enter the number of kilometers: ");
                 double kilometers = double.Parse(Console.ReadLine());
                 double miles = kilometers * 0.621371192;
-                Console.WriteLine("{0} kilometers is equal to {1} miles\n\n", kilometers, miles);
+                Console.WriteLine("{0} kilometers is equal to {1:N3} miles\n\n", kilometers, miles);
             }
             catch
             {
@@ -101,7 +101,7 @@ namespace UnitConvertorHarjoitus
                 Console.Write("Please enter the number of miles: ");
                 double miles = double.Parse(Console.ReadLine());
                 double kilometers = miles * 1.609344;
-                Console.WriteLine("{0} miles is equal to {1} kilometers.", miles, kilometers);
+                Console.WriteLine("{0} miles is equal to {1:N3} kilometers.", miles, kilometers);
             }
             catch
             {
@@ -118,7 +118,7 @@ namespace UnitConvertorHarjoitus
                 Console.Write("Please enter the number of pounds: ");
                 double pounds = double.Parse(Console.ReadLine());
                 double kilograms = pounds * 0.45359237;
-                Console.WriteLine("{0} pounds is equal to {1} kilograms\n\n", pounds, kilograms);
+                Console.WriteLine("{0} pounds is equal to {1:N3} kilograms\n\n", pounds, kilograms);
             }
             catch
             {
@@ -134,7 +134,7 @@ namespace UnitConvertorHarjoitus
                 Console.Write("Please enter the number of kilograms: ");
                 double kilograms = double.Parse(Console.ReadLine());
                 double pounds = kilograms * 2.20462262;
-                Console.WriteLine("{0} kilograms is equal to {1} pounds\n\n", kilograms, pounds);
+                Console.WriteLine("{0} kilograms is equal to {1:N3} pounds\n\n", kilograms, pounds);
             }
             catch
             {
@@ -150,7 +150,7 @@ namespace UnitConvertorHarjoitus
                 Console.Write("Please enter the number of deciliters: ");
                 double deciliters = double.Parse(Console.ReadLine());
                 double cups = deciliters * 0.422675284;
-                Console.WriteLine("{0} deciliters is equal to {1} cups\n\n", deciliters, cups);
+                Console.WriteLine("{0} deciliters is equal to {1:N2} cups\n\n", deciliters, cups);
             }
             catch
             {
@@ -166,7 +166,7 @@ namespace UnitConvertorHarjoitus
                 Console.Write("Please enter the number of cups: ");
                 double cups = double.Parse(Console.ReadLine());
                 double deciliters = cups * 2.36588237;
-                Console.WriteLine("{0} cups is equal to {1} deciliters\n\n", cups, deciliters);
+                Console.WriteLine("{0} cups is equal to {1:N2} deciliters\n\n", cups, deciliters);
             }
             catch
             {
